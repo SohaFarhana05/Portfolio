@@ -1,0 +1,299 @@
+/* Common CSS for all pages */
+
+/* CSS Variables */
+:root {
+    --primary-color: #2193b0;
+    --secondary-color: #6dd5ed;
+    --text-color: #2c3e50;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+    --card-bg-dark: #2c3e50;
+    --header-bg: #ffffff;
+    --header-bg-dark: #34495e;
+    --border-color: #e1e8ed;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 80px 20px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Common gradient text */
+.gradient-text {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Header Navigation */
+#header {
+    padding: 1rem 2rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#header a {
+    margin-left: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+#header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease-in-out;
+}
+
+#header a:hover::after {
+    width: 100%;
+}
+
+#header a:hover {
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* Theme Toggle */
+.theme-switch-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #e2e2e2;
+}
+
+.dark-theme div {
+    color: #e2e2e2;
+}
+
+.dark-theme a {
+    color: #74b9ff;
+}
+
+.dark-theme #header {
+    background-color: rgba(26, 26, 46, 0.95);
+}
+
+.dark-theme .theme-switch-wrapper {
+    background-color: rgba(26, 26, 46, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .gradient-text {
+    background: linear-gradient(45deg, #74b9ff, #00b894);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Base responsive styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    body {
+        padding: 100px 10px 10px;
+    }
+    
+    #header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.8rem 0.5rem;
+        gap: 0.8rem;
+    }
+    
+    #header a {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+        background: rgba(52, 152, 219, 0.1);
+        transition: all 0.3s ease;
+        margin-left: 0;
+    }
+    
+    #header a:hover,
+    #header a.active {
+        background: rgba(52, 152, 219, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    .dark-theme #header a {
+        background: rgba(116, 185, 255, 0.1);
+    }
+    
+    .dark-theme #header a:hover,
+    .dark-theme #header a.active {
+        background: rgba(116, 185, 255, 0.2);
+    }
+    
+    .gradient-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 110px 5px 5px;
+    }
+    
+    .gradient-text {
+        font-size: 2rem;
+    }
+    
+    .theme-switch-wrapper {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+    }
+    
+    .theme-switch {
+        width: 50px;
+        height: 28px;
+    }
+    
+    .slider:before {
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 3px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus,
+input:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.dark-theme button:focus,
+.dark-theme a:focus,
+.dark-theme input:focus {
+    outline-color: #74b9ff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+}

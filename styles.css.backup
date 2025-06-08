@@ -1,0 +1,1736 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 80px 20px 20px;
+    background-color: #f5f6fa;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+}
+
+/* Only apply padding/margin to content divs, not layout containers */
+.content-div, 
+.intro-container > div:not(.photo-container),
+.institution-details,
+.participation-content,
+.project-body {
+    padding: 20px;
+    margin-bottom: 1.5rem;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout specific */
+#header {
+    padding: 1rem 2rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#header a {
+    margin-left: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+#header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease-in-out;
+}
+
+#header a:hover::after {
+    width: 100%;
+}
+
+#header a:hover {
+    text-decoration: none;
+    color: #3498db;
+}
+
+#my-photo {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#intro {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 600px;
+}
+
+/* Theme Toggle */
+.theme-switch-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1a1a2e;
+    color: #e2e2e2;
+}
+
+.dark-theme div {
+    color: #e2e2e2;
+}
+
+.dark-theme a {
+    color: #74b9ff;
+}
+
+/* Dark theme header adjustments */
+.dark-theme #header {
+    background-color: rgba(26, 26, 46, 0.95);
+}
+
+.dark-theme .theme-switch-wrapper {
+    background-color: rgba(26, 26, 46, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Certificates Grid */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 20px;
+}
+
+.certificate-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.certificate-img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Add responsive design for certificates */
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+    #intro {
+        max-width: 100%;
+    }
+}
+
+/* Creative Layout Styles */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-photo {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#my-photo img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+#my-photo:hover {
+    transform: scale(1.02);
+}
+
+#my-photo:hover img {
+    filter: grayscale(0%);
+}
+
+#intro ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#intro li {
+    padding: 0.5rem 0;
+    font-size: 1.1em;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#intro li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .text-content {
+        padding-right: 0;
+    }
+    
+    #intro li {
+        text-align: left;
+    }
+}
+
+/* Contact Page Styles */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 3.5em;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Dark theme adjustments for contact page */
+.dark-theme .contact-heading {
+    color: #e2e2e2;
+}
+
+/* Removing the box effect in dark mode */
+.contact-heading {
+    font-size: 3.5em;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+.contact-item p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Dark theme adjustments for contact page */
+.dark-theme .contact-heading {
+    color: #e2e2e2;
+}
+
+/* Responsive design for contact grid */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Participations Section */
+#participations {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#participations h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.participation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 20px;
+}
+
+.participation-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.participation-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.participation-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.participation-content {
+    padding: 1.5rem;
+}
+
+.participation-content h3 {
+    margin: 0 0 1rem;
+    color: #2c3e50;
+    font-size: 1.4em;
+}
+
+.participation-content .description {
+    color: #666;
+    line-height: 1.6;
+    min-height: 100px; /* Space for description */
+}
+
+/* Dark theme adjustments for participations */
+.dark-theme #participations h2 {
+    color: #e2e2e2;
+}
+
+.dark-theme .participation-card {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .participation-content h3 {
+    color: #e2e2e2;
+}
+
+.dark-theme .participation-content .description {
+    color: #b0b0b0;
+}
+
+/* Responsive design for participations */
+@media (max-width: 768px) {
+    .participation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #participations h2 {
+        font-size: 2em;
+    }
+}
+
+/* About Page Intro Styles */
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-intro h1 {
+    font-size: 3.5em;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.greeting {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #34495e;
+}
+
+.skills-highlight {
+    background: rgba(52, 152, 219, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.skills-highlight p {
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.skills-highlight ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.skills-highlight li {
+    font-size: 1.1em;
+    padding: 0.5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.skills-highlight li:hover {
+    transform: translateX(10px);
+}
+
+/* Dark theme adjustments */
+.dark-theme .about-intro h1 {
+    background: linear-gradient(45deg, #74b9ff, #00b894);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark-theme .greeting {
+    color: #74b9ff;
+}
+
+.dark-theme .tagline {
+    color: #e2e2e2;
+}
+
+.dark-theme .description {
+    color: #b2bec3;
+}
+
+.dark-theme .skills-highlight {
+    background: rgba(116, 185, 255, 0.05);
+}
+
+.dark-theme .skills-highlight p {
+    color: #74b9ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-intro h1 {
+        font-size: 2.5em;
+    }
+    
+    .greeting {
+        font-size: 1.8em;
+    }
+    
+    .tagline {
+        font-size: 1.3em;
+    }
+    
+    .skills-highlight ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Homepage Styles */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.creative-heading {
+    margin-bottom: 2rem;
+}
+
+.gradient-text {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+    text-align: left;
+}
+
+.dark-theme .subtitle {
+    color: #a0a0a0;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+    color: #555;
+}
+
+.tagline p {
+    text-align: left;
+    margin: 0;
+}
+
+.dark-theme .tagline {
+    color: #b0b0b0;
+}
+
+.text-content {
+    padding: 0;
+    margin: 0;
+}
+
+.greeting-text {
+    display: block;
+    font-size: 1.2rem;
+    color: #6dd5ed;
+    margin-bottom: 1rem;
+    animation: slideIn 0.8s ease-out;
+    text-align: left;
+}
+
+.quick-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.photo-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: translateY(-10px);
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%) brightness(0.8);
+    transition: filter 0.5s ease;
+}
+
+.photo-frame:hover .profile-image {
+    filter: grayscale(0%) brightness(1);
+}
+
+.education-highlight {
+    margin: 2rem 0;
+    padding: 2rem 0;
+}
+
+.education-highlight h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.dark-theme .education-highlight h2 {
+    color: #e2e2e2;
+}
+
+.degree-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.degree-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.degree-card:hover {
+    transform: translateY(-5px);
+}
+
+.degree-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.dark-theme .degree-card h3 {
+    color: #e2e2e2;
+}
+
+.degree-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.dark-theme .degree-card p {
+    color: #b0b0b0;
+}
+
+.degree-focus {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 3rem 0;
+}
+
+.cta-section p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.dark-theme .cta-section p {
+    color: #e2e2e2;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:first-child {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid #2193b0;
+    color: #2193b0;
+}
+
+.dark-theme .cta-button.secondary {
+    border-color: #6dd5ed;
+    color: #6dd5ed;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+/* Education Page Styles */
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.institution-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.institution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .institution-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.institution-link {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.institution-link:hover {
+    transform: scale(1.05);
+}
+
+.institution-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.institution-details {
+    flex-grow: 1;
+}
+
+.institution-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.institution-details p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.specialization {
+    color: #2193b0;
+    font-weight: 500;
+}
+
+.dark-theme .institution-details h2 {
+    color: #e2e2e2;
+}
+
+.dark-theme .institution-details p {
+    color: #b0b0b0;
+}
+
+.dark-theme .specialization {
+    color: #6dd5ed;
+}
+
+/* Responsive design for education page */
+@media (max-width: 768px) {
+    .institution-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .institution-logo {
+        width: 120px;
+        max-height: 120px;
+        margin: 0 auto;
+    }
+
+    .institution-details h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .institution-details p {
+        font-size: 1rem;
+    }
+}
+
+/* Projects Page Styles - New Separated Layout */
+.projects-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.projects-section {
+    margin: 4rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.project-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-header h3 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.project-status {
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-status.completed {
+    background: rgba(39, 174, 96, 0.2);
+    color: #27ae60;
+    border: 2px solid rgba(39, 174, 96, 0.3);
+}
+
+.project-status.in-progress {
+    background: rgba(241, 196, 15, 0.2);
+    color: #f39c12;
+    border: 2px solid rgba(241, 196, 15, 0.3);
+}
+
+.project-body {
+    padding: 2.5rem;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.project-features {
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.feature-item::before {
+    content: "✓";
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 2rem 0;
+}
+
+.tech-tag {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.tech-tag:hover {
+    transform: scale(1.05);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: #2193b0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #2193b0;
+    border-radius: 30px;
+    background: rgba(33, 147, 176, 0.05);
+}
+
+.project-link:hover {
+    background: #2193b0;
+    color: white;
+    transform: translateX(5px);
+        text-decoration: none;
+}
+
+/* Dark Theme Styles */
+.dark-theme .project-item {
+    background: rgba(26, 26, 46, 0.8);
+    border-color: rgba(116, 185, 255, 0.1);
+}
+
+.dark-theme .project-description {
+    color: #e2e2e2;
+}
+
+.dark-theme .feature-item {
+    color: #b0b0b0;
+}
+
+.dark-theme .project-link {
+    color: #74b9ff;
+    border-color: #74b9ff;
+    background: rgba(116, 185, 255, 0.05);
+}
+
+.dark-theme .project-link:hover {
+    background: #74b9ff;
+    color: #1a1a2e;
+}
+
+/* Mobile-First Responsive Design */
+
+/* Base responsive styles for images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profile-photo,
+.about-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    body {
+        padding: 70px 15px 15px;
+    }
+    
+    .projects-container {
+        padding: 1.5rem;
+    }
+    
+    .project-header {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .project-header h3 {
+        font-size: 1.8rem;
+    }
+    
+    .project-body {
+        padding: 2rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 60px 10px 10px;
+        font-size: 14px;
+    }
+    
+    /* Remove universal div padding - apply only to specific content divs */
+    .content-div, 
+    .project-body,
+    .institution-details,
+    .participation-content {
+        padding: 15px;
+        margin-bottom: 1rem;
+    }
+    
+    /* Hero section mobile adjustments */
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: auto;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+    
+    .text-content {
+        order: 2;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .photo-container {
+        order: 1;
+        margin-bottom: 1rem;
+    }
+    
+    .gradient-text {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .greeting-text {
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tagline p {
+        text-align: left;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    /* Reduce section spacing on mobile */
+    .education-highlight {
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+    }
+    
+    .highlights-section {
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+    }
+    
+    .cta-section {
+        margin: 2rem 0;
+        padding: 1.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .degree-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .degree-card {
+        padding: 1.5rem;
+    }
+    
+    /* Home container mobile adjustments */
+    .home-container {
+        padding: 1rem;
+        margin: 0;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .project-header h3 {
+        font-size: 1.6rem;
+    }
+    
+    .project-description {
+        font-size: 1.1rem;
+    }
+    
+    .feature-item {
+        font-size: 1rem;
+    }
+    
+    .tech-stack {
+        gap: 0.5rem;
+    }
+    
+    .tech-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .project-body {
+        padding: 1.5rem;
+    }
+    
+    .projects-list {
+        gap: 2rem;
+    }
+    
+    .project-item {
+        border-radius: 15px;
+    }
+    
+    .project-header {
+        padding: 1.2rem;
+    }
+    
+    .project-status {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Navigation adjustments */
+    #header {
+        padding: 0.8rem 1rem;
+        gap: 1rem;
+    }
+    
+    #header a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    
+    /* Theme switch adjustments */
+    .theme-switch-wrapper {
+        top: 15px;
+        right: 15px;
+    }
+    
+    /* Profile links mobile layout */
+    .profiles-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .profile-link {
+        padding: 0.8rem 1.2rem;
+        justify-content: center;
+    }
+    
+    /* Achievements mobile layout */
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .achievement-card {
+        padding: 1.2rem;
+    }
+    
+    /* Interests mobile layout */
+    .interests-grid {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+    
+    .interest-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Photo display fixes for mobile */
+    .profile-photo,
+    .about-photo {
+        max-width: 250px;
+        margin: 1rem auto;
+    }
+    
+    /* Certificate grid mobile */
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .certificate-placeholder {
+        padding: 1.5rem;
+        min-height: 150px;
+    }
+    
+    /* Education page mobile */
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .institution-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    body {
+        padding: 60px 5px 5px;
+    }
+    
+    .home-container {
+        padding: 0.5rem;
+    }
+    
+    .hero-section {
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .gradient-text {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .greeting-text {
+        font-size: 0.9rem;
+    }
+    
+    .tagline p {
+        font-size: 0.95rem;
+    }
+    
+    .quick-links {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .education-highlight,
+    .highlights-section,
+    .cta-section {
+        margin: 1rem 0;
+        padding: 0.8rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .degree-card {
+        padding: 1.2rem;
+    }
+    
+    .degree-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .degree-card p {
+        font-size: 1rem;
+    }
+    
+    .degree-focus {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .highlight-card {
+        padding: 1rem;
+    }
+    
+    .highlight-number {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* Ultra-small screens (320px and below) */
+@media (max-width: 320px) {
+    body {
+        padding: 50px 3px 3px;
+    }
+    
+    .gradient-text {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .cta-button {
+        width: 90%;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape orientation on mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        min-height: auto;
+    }
+    
+    .text-content {
+        order: 1;
+    }
+    
+    .photo-container {
+        order: 2;
+    }
+    
+    .gradient-text {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Final Mobile Navigation & UX Enhancements */
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+    #header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.8rem 0.5rem;
+        gap: 0.8rem;
+    }
+    
+    #header a {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+        background: rgba(52, 152, 219, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    #header a:hover,
+    #header a.active {
+        background: rgba(52, 152, 219, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    .dark-theme #header a {
+        background: rgba(116, 185, 255, 0.1);
+    }
+    
+    .dark-theme #header a:hover,
+    .dark-theme #header a.active {
+        background: rgba(116, 185, 255, 0.2);
+    }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+    .project-item:hover,
+    .certificate-card:hover,
+    .institution-card:hover {
+        transform: none;
+    }
+    
+    .project-item:active,
+    .certificate-card:active,
+    .institution-card:active {
+        transform: scale(0.98);
+    }
+    
+    .tech-tag:hover {
+        transform: none;
+    }
+    
+    .tech-tag:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Improved scrolling on mobile */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Better button accessibility on mobile */
+.cta-button,
+.project-link,
+.profile-link {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+    overflow-x: hidden;
+}
+
+.projects-container,
+.home-container,
+.about-intro,
+.education-container,
+.contact-container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Theme switch mobile positioning */
+@media (max-width: 480px) {
+    .theme-switch-wrapper {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+    }
+    
+    .theme-switch {
+        width: 50px;
+        height: 28px;
+    }
+    
+    .slider:before {
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 3px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+}
+
+/* Performance optimizations for mobile */
+.project-item,
+.certificate-card,
+.institution-card,
+.participation-card {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Focus states for better accessibility */
+button:focus,
+a:focus,
+input:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+.dark-theme button:focus,
+.dark-theme a:focus,
+.dark-theme input:focus {
+    outline-color: #74b9ff;
+}
+
+/* Optimize for high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-image,
+    .about-photo,
+    .institution-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}

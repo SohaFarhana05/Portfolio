@@ -1,0 +1,243 @@
+/* Education Page Specific Styles */
+
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.education-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.institution-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.institution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.institution-link {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.institution-link:hover {
+    transform: scale(1.05);
+}
+
+.institution-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.institution-details {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.institution-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.institution-details p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.specialization {
+    color: #2193b0;
+    font-weight: 500;
+}
+
+/* Achievements Section */
+.achievements-section {
+    margin-top: 4rem;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2193b0;
+}
+
+.achievement-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Interests Section */
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.interest-item {
+    display: inline-block;
+}
+
+.interest-tag {
+    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.interest-tag:hover {
+    transform: scale(1.05);
+}
+
+/* Dark Theme Adjustments */
+.dark-theme .institution-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .institution-details h2 {
+    color: #e2e2e2;
+}
+
+.dark-theme .institution-details p {
+    color: #b0b0b0;
+}
+
+.dark-theme .specialization {
+    color: #6dd5ed;
+}
+
+.dark-theme .achievement-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .achievement-card h3 {
+    color: #6dd5ed;
+}
+
+.dark-theme .achievement-card p {
+    color: #b0b0b0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .education-container {
+        padding: 1rem;
+    }
+    
+    .institution-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .institution-logo {
+        width: 120px;
+        max-height: 120px;
+        margin: 0 auto;
+    }
+
+    .institution-details h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .institution-details p {
+        font-size: 1rem;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .achievement-card {
+        padding: 1.2rem;
+    }
+    
+    .interests-grid {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+    
+    .interest-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .institution-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .institution-logo {
+        width: 100px;
+        max-height: 100px;
+    }
+    
+    .institution-details h2 {
+        font-size: 1.2rem;
+    }
+    
+    .institution-details p {
+        font-size: 0.95rem;
+    }
+    
+    .achievement-card {
+        padding: 1rem;
+    }
+    
+    .achievement-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .achievement-card p {
+        font-size: 0.9rem;
+    }
+}

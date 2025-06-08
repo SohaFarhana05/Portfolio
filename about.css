@@ -1,0 +1,311 @@
+/* About Page Specific Styles */
+
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.greeting {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #3498db;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #34495e;
+}
+
+.skills-highlight {
+    background: rgba(52, 152, 219, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.skills-highlight p {
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.skills-highlight ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.skills-highlight li {
+    font-size: 1.1em;
+    padding: 0.5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.skills-highlight li:hover {
+    transform: translateX(10px);
+}
+
+/* Coding Profiles */
+.coding-profiles {
+    margin-top: 2rem;
+}
+
+.profiles-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-height: 44px;
+}
+
+.profile-link.leetcode {
+    background: linear-gradient(45deg, #FFA116, #FF8C00);
+    color: white;
+}
+
+.profile-link.gfg {
+    background: linear-gradient(45deg, #2F8D46, #4CAF50);
+    color: white;
+}
+
+.profile-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Certificates Section */
+#certificates {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#certificates h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.certificate-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.certificate-img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Participations Section */
+#participations {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#participations h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.participation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.participation-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.participation-card:hover {
+    transform: translateY(-5px);
+}
+
+.participation-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.participation-content {
+    padding: 1.5rem;
+}
+
+.participation-content h3 {
+    margin: 0 0 1rem;
+    color: #2c3e50;
+    font-size: 1.4em;
+}
+
+.participation-content .description {
+    color: #666;
+    line-height: 1.6;
+    min-height: 100px;
+}
+
+/* Dark Theme Adjustments */
+.dark-theme .greeting {
+    color: #74b9ff;
+}
+
+.dark-theme .tagline {
+    color: #e2e2e2;
+}
+
+.dark-theme .description {
+    color: #b2bec3;
+}
+
+.dark-theme .skills-highlight {
+    background: rgba(116, 185, 255, 0.05);
+}
+
+.dark-theme .skills-highlight p {
+    color: #74b9ff;
+}
+
+.dark-theme #certificates h2,
+.dark-theme #participations h2 {
+    color: #e2e2e2;
+}
+
+.dark-theme .participation-card {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .participation-content h3 {
+    color: #e2e2e2;
+}
+
+.dark-theme .participation-content .description {
+    color: #b0b0b0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about-intro {
+        padding: 1rem;
+    }
+    
+    .greeting {
+        font-size: 1.8em;
+    }
+    
+    .tagline {
+        font-size: 1.3em;
+    }
+    
+    .skills-highlight ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .profiles-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .profile-link {
+        width: 80%;
+        justify-content: center;
+    }
+    
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .participation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #certificates h2,
+    #participations h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profiles-container {
+        gap: 0.8rem;
+    }
+    
+    .profile-link {
+        width: 90%;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .profile-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
