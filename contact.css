@@ -1,7 +1,7 @@
 /* Contact Page Styles */
 
 .contact-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -16,41 +16,40 @@
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    background: var(--card-bg);
-    border-radius: 15px;
+    justify-content: center;
+    padding: 2rem 1rem;
     text-decoration: none;
     color: var(--text-color);
     transition: all 0.3s ease;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
 }
 
 .contact-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
 }
 
 .contact-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
 }
 
 .contact-item:hover .contact-icon {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 .contact-item p {
@@ -58,6 +57,7 @@
     font-weight: 500;
     margin: 0;
     color: var(--text-color);
+    text-align: center;
 }
 
 /* Responsive Design */
@@ -72,17 +72,19 @@
     }
     
     .contact-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: 1fr;
         gap: 1.5rem;
+        max-width: 400px;
     }
     
     .contact-item {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
+        min-height: 160px;
     }
     
     .contact-icon {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -96,17 +98,19 @@
     }
     
     .contact-grid {
-        grid-template-columns: 1fr;
         gap: 1rem;
+        max-width: 320px;
     }
     
     .contact-item {
-        padding: 1.25rem;
+        padding: 1rem 0.5rem;
+        min-height: 140px;
     }
     
     .contact-icon {
-        width: 45px;
-        height: 45px;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
     }
     
     .contact-item p {
@@ -116,12 +120,11 @@
 
 /* Dark theme specific adjustments */
 body.dark-theme .contact-item {
-    background: var(--card-bg-dark);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
 }
 
 body.dark-theme .contact-item:hover {
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
+    color: var(--primary-color);
 }
 
 /* Animation keyframes */
