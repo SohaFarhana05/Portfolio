@@ -117,44 +117,118 @@
     margin: 0 auto;
 }
 
-#certificates h2 {
+body #certificates h2,
+body #leadership h2,
+body #internships h2,
+body #participations h2 {
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5em;
-    color: #2c3e50;
+    font-size: 2.7em;
+    color: #1565c0 !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 24px rgba(21,101,192,0.10), 0 1.5px 0 #fff;
+}
+
+body.dark-theme #certificates h2,
+body.dark-theme #leadership h2,
+body.dark-theme #internships h2,
+body.dark-theme #participations h2 {
+    color: #90caf9 !important;
+    text-shadow: 0 4px 24px rgba(144,202,249,0.15), 0 1.5px 0 #232946;
 }
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3.5rem 5rem; /* Increased column gap for more space between boxes */
+    justify-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .certificate-card {
+    background: linear-gradient(135deg, #e3eafc 80%, #f5faff 100%);
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(21,101,192,0.08), 0 1.5px 0 #fff;
+    transition: transform 0.25s, box-shadow 0.25s;
     text-align: center;
-    transition: transform 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1.5rem 1.2rem 1.8rem 1.2rem;
+    border: 1.5px solid #e3eafc;
+    min-width: 280px;
+    max-width: 370px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    position: relative;
 }
 
 .certificate-card:hover {
-    transform: translateY(-5px);
-}
-
-.certificate-card a {
-    text-decoration: none;
-    color: inherit;
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 12px 40px rgba(21,101,192,0.13);
+    border-color: #90caf9;
 }
 
 .certificate-img {
     width: 100%;
-    max-width: 300px;
-    height: 200px;
-    object-fit: cover;
+    max-width: 260px;
+    height: 140px;
+    object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.1rem;
+    background: #e3eafc;
+    box-shadow: 0 2px 8px rgba(21,101,192,0.06);
+}
+
+.certificate-card p {
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 1.13em;
+    color: #263238;
+    font-weight: 600;
+}
+
+.certificate-card .explanation {
+    font-size: 0.98em;
+    color: #3a4a5d;
+    font-weight: 400;
+    margin-top: 0.7rem;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
+
+.dark-theme .certificates-grid {
+    background: none;
+}
+
+.dark-theme .certificate-card {
+    background: linear-gradient(135deg, #232946 80%, #1a1a2e 100%);
+    border: 1.5px solid #232946;
+    box-shadow: 0 6px 32px rgba(144,202,249,0.10);
+}
+
+.dark-theme .certificate-card p {
+    color: #e3f2fd;
+}
+
+.dark-theme .certificate-card .explanation {
+    color: #b0bec5;
+}
+
+.dark-theme .certificate-img {
+    background: #232946;
+}
+
+@media (max-width: 900px) {
+    .certificates-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+    .certificate-card {
+        padding: 1.1rem 0.5rem 1.3rem 0.5rem;
+    }
 }
 
 /* Participations Section */
@@ -167,8 +241,16 @@
 #participations h2 {
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2.5em;
-    color: #2c3e50;
+    font-size: 2.7em;
+    color: #1565c0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 24px rgba(21,101,192,0.10), 0 1.5px 0 #fff;
+}
+
+.dark-theme #participations h2 {
+    color: #90caf9;
+    text-shadow: 0 4px 24px rgba(144,202,249,0.15), 0 1.5px 0 #232946;
 }
 
 .participation-grid {
@@ -211,7 +293,205 @@
     min-height: 100px;
 }
 
-/* Dark Theme Adjustments */
+/* Internships Section */
+#internships {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#internships h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.7em;
+    color: #1565c0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 24px rgba(21,101,192,0.10), 0 1.5px 0 #fff;
+}
+
+.dark-theme #internships h2 {
+    color: #90caf9;
+    text-shadow: 0 4px 24px rgba(144,202,249,0.15), 0 1.5px 0 #232946;
+}
+
+.internship-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.internship-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1.5px solid #e3eafc;
+}
+
+.internship-card:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(21,101,192,0.10);
+}
+
+.dark-theme .internship-card {
+    background: linear-gradient(135deg, #232946 80%, #1a1a2e 100%);
+    border: 1.5px solid #232946;
+    box-shadow: 0 4px 24px rgba(144,202,249,0.08);
+}
+
+.internship-content h3 {
+    margin: 0.5rem 0 0.2rem;
+    color: #1565c0;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.dark-theme .internship-content h3 {
+    color: #90caf9;
+}
+
+.internship-content .org {
+    font-weight: 700;
+    color: #263238;
+    margin-bottom: 0.2rem;
+    font-size: 1.08em;
+}
+
+.dark-theme .internship-content .org {
+    color: #e3f2fd;
+}
+
+.internship-content .duration {
+    font-size: 0.97em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.dark-theme .internship-content .duration {
+    color: #b0bec5;
+}
+
+.internship-content .desc {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.dark-theme .internship-content .desc {
+    color: #b0bec5;
+}
+
+.internship-img {
+    width: 100%;
+    max-width: 220px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.10);
+    background: #e3eafc;
+}
+
+.dark-theme .internship-img {
+    background: #232946;
+}
+
+/* Leadership Section */
+#leadership {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+}
+
+#leadership h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.7em;
+    color: #1565c0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 24px rgba(21,101,192,0.10), 0 1.5px 0 #fff;
+}
+
+.dark-theme #leadership h2 {
+    color: #90caf9;
+    text-shadow: 0 4px 24px rgba(144,202,249,0.15), 0 1.5px 0 #232946;
+}
+
+.leadership-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    color: #1a237e;
+    font-weight: 500;
+    border: 1.5px solid #e3eafc;
+}
+
+.leadership-card:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(21,101,192,0.10);
+}
+
+.dark-theme .leadership-card {
+    background: linear-gradient(135deg, #232946 80%, #1a1a2e 100%);
+    color: #e3f2fd;
+    border: 1.5px solid #232946;
+    box-shadow: 0 4px 24px rgba(144,202,249,0.08);
+}
+
+.leadership-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #1565c0;
+    margin-bottom: 0.5rem;
+}
+
+.dark-theme .leadership-title {
+    color: #90caf9;
+}
+
+.leadership-org {
+    font-size: 1.1em;
+    color: #263238;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.dark-theme .leadership-org {
+    color: #e3f2fd;
+}
+
+.leadership-duration {
+    font-size: 0.95em;
+    color: #888;
+    margin-bottom: 0.7rem;
+}
+
+.dark-theme .leadership-duration {
+    color: #b0bec5;
+}
+
+.leadership-desc {
+    color: #263238;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.dark-theme .leadership-desc {
+    color: #b0bec5;
+}
+
 .dark-theme .greeting {
     color: #74b9ff;
 }
@@ -233,7 +513,7 @@
 }
 
 .dark-theme #certificates h2,
-.dark-theme #participations h2 {
+.dark-theme #leadership h2 {
     color: #e2e2e2;
 }
 
@@ -247,6 +527,101 @@
 
 .dark-theme .participation-content .description {
     color: #b0b0b0;
+}
+
+.dark-theme .leadership-card {
+    background: linear-gradient(90deg, #232946 0%, #1a1a2e 100%);
+    color: #e3f2fd;
+}
+
+/* Experience/Positions Section Styling */
+.experience-section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #18182a;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.experience-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: #23233a;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: transform 0.15s;
+}
+.experience-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.experience-card img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #22223a;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.experience-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #b3b3ff;
+  margin-bottom: 2px;
+}
+
+.experience-org {
+  font-size: 1.01rem;
+  color: #e0e0e0;
+  margin-bottom: 2px;
+}
+
+.experience-dates {
+  font-size: 0.98rem;
+  color: #b0b0b0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .experience-section {
+    padding: 10px;
+  }
+  .experience-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 10px;
+  }
+  .experience-card img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Optional: Add a nice section heading */
+.experience-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 /* Mobile Responsive */
@@ -288,7 +663,7 @@
     }
     
     #certificates h2,
-    #participations h2 {
+    #leadership h2 {
         font-size: 2em;
     }
 }
@@ -307,5 +682,42 @@
     .profile-icon {
         width: 20px;
         height: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .internship-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .internship-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #leadership {
+        padding: 2rem 0.5rem;
+    }
+    .leadership-card {
+        padding: 1.2rem 0.7rem;
+    }
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem; /* Increased gap for more space between boxes */
+}
+
+@media (max-width: 1200px) {
+    .certificate-container {
+        gap: 3rem; /* Slightly larger gap for medium screens */
+    }
+}
+@media (max-width: 800px) {
+    .certificate-container {
+        flex-direction: column;
+        gap: 2rem; /* Stack vertically with reasonable gap on small screens */
     }
 }
