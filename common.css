@@ -297,3 +297,51 @@ html {
 body {
     -webkit-overflow-scrolling: touch;
 }
+
+/* Footer minimal, seamless look */
+.site-footer {
+  background: transparent !important;
+  box-shadow: none;
+  border: none;
+  margin-top: 40px;
+  padding: 24px 0 10px 0;
+}
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2193b0;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.footer-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 10px;
+}
+.footer-icon {
+  width: 36px;
+  height: 36px;
+  margin: 0 6px;
+  vertical-align: middle;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  padding: 4px;
+}
+.footer-icon:hover {
+  transform: scale(1.13) translateY(-2px);
+  box-shadow: 0 4px 16px rgba(33,147,176,0.18);
+}
+@media (prefers-color-scheme: dark) {
+  .site-footer {
+    background: rgba(30,32,50,0.12) !important;
+  }
+}

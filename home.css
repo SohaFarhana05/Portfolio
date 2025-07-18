@@ -143,17 +143,19 @@
 }
 
 .degree-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .degree-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(33, 147, 176, 0.3);
 }
 
 .degree-card h3 {
@@ -200,17 +202,19 @@
 }
 
 .highlight-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .highlight-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(33, 147, 176, 0.3);
 }
 
 .highlight-number {
@@ -293,6 +297,19 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-decoration: none;
+}
+
+/* Dark theme for cards */
+.dark-theme .degree-card {
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(116, 185, 255, 0.1);
+}
+
+.dark-theme .highlight-card {
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(116, 185, 255, 0.1);
 }
 
 /* Mobile Styles - Text First, Photo Second */

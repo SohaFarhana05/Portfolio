@@ -1,7 +1,7 @@
 /* Education Page Specific Styles */
 
 .education-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -10,32 +10,26 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    margin-top: 3rem;
 }
 
 .institution-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     gap: 3rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
 .institution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.institution-link {
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.institution-link:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(33, 147, 176, 0.3);
 }
 
 .institution-logo {
@@ -58,7 +52,7 @@
 
 .institution-details p {
     font-size: 1.2rem;
-    color: #666;
+    color: #444;
     margin-bottom: 0.5rem;
 }
 
@@ -67,41 +61,54 @@
     font-weight: 500;
 }
 
-/* Achievements Section */
-.achievements-section {
-    margin-top: 4rem;
-}
-
-.achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.achievement-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.achievement-card:hover {
-    transform: translateY(-5px);
-}
-
-.achievement-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+.experience-timeline {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    font-size: 1.15rem;
     color: #2193b0;
+    font-weight: 600;
+    background: #eaf6fa;
+    padding: 10px 28px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(33,147,176,0.07);
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    text-align: center;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 2;
 }
 
-.achievement-card p {
-    color: #666;
-    line-height: 1.6;
+.grade-range {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 1rem;
 }
+
+@media (max-width: 900px) {
+    .institution-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .institution-logo {
+        width: 120px;
+    }
+    .experience-timeline {
+        position: static;
+        margin-left: auto;
+        margin-top: 0.5rem;
+        min-width: 0;
+        max-width: 100%;
+        display: block;
+    }
+}
+
+/* Removed prefers-color-scheme media queries - using class-based dark theme instead */
 
 /* Interests Section */
 .interests-grid {
@@ -131,35 +138,43 @@
     transform: scale(1.05);
 }
 
-/* Dark Theme Adjustments */
-.dark-theme .institution-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* Achievements Section */
+.achievements-section {
+    margin-top: 4rem;
 }
 
-.dark-theme .institution-details h2 {
-    color: #e2e2e2;
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
-.dark-theme .institution-details p {
-    color: #b0b0b0;
+.achievement-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-.dark-theme .specialization {
-    color: #6dd5ed;
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: rgba(33, 147, 176, 0.3);
 }
 
-.dark-theme .achievement-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+.achievement-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #2193b0;
 }
 
-.dark-theme .achievement-card h3 {
-    color: #6dd5ed;
-}
-
-.dark-theme .achievement-card p {
-    color: #b0b0b0;
+.achievement-card p {
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Mobile Responsive */
@@ -240,4 +255,41 @@
     .achievement-card p {
         font-size: 0.9rem;
     }
+}
+
+/* Dark Theme Styles */
+.dark-theme .institution-card {
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(116, 185, 255, 0.1);
+}
+
+.dark-theme .institution-details h2 {
+    color: #e2e2e2;
+}
+
+.dark-theme .institution-details p {
+    color: #e2e2e2;
+}
+
+.dark-theme .degree-type {
+    background: rgba(116, 185, 255, 0.2);
+    color: #74b9ff;
+}
+
+.dark-theme .grade-range {
+    color: #6dd5ed;
+}
+
+.dark-theme .achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .achievement-card h3 {
+    color: #74b9ff;
+}
+
+.dark-theme .achievement-card p {
+    color: #b0b0b0;
 }

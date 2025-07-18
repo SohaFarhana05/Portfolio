@@ -1,0 +1,165 @@
+/* Experience Page Styles (match projects boxes) */
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.experience-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    min-height: 220px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: rgba(33, 147, 176, 0.3);
+}
+
+.experience-logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.experience-details {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.experience-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.experience-org {
+    font-size: 1.2rem;
+    color: #2193b0;
+    margin-bottom: 0.5rem;
+}
+
+.experience-timeline {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.experience-timeline.right-timeline {
+    white-space: nowrap;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    font-size: 1.15rem;
+    color: #2193b0;
+    font-weight: 600;
+    background: #eaf6fa;
+    padding: 10px 28px;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(33,147,176,0.07);
+    letter-spacing: 0.5px;
+    min-width: 220px;
+    text-align: center;
+    max-width: 320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.experience-desc {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.experience-period {
+    color: #27ae60;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Dark Theme Styles */
+.dark-theme .experience-card {
+    background: rgba(26, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(116, 185, 255, 0.1);
+}
+
+.dark-theme .experience-title {
+    color: #e2e2e2;
+}
+
+.dark-theme .experience-company {
+    color: #74b9ff;
+}
+
+.dark-theme .experience-description {
+    color: #e2e2e2;
+}
+
+.dark-theme .experience-period {
+    color: #6dd5ed;
+}
+
+.dark-theme .site-footer {
+    background: rgba(30,32,50,0.12);
+}
+
+@media (max-width: 900px) {
+    .experience-card, .institution-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .experience-logo, .institution-logo {
+        width: 120px;
+    }
+    .experience-timeline.right-timeline {
+        position: static;
+        margin-left: auto;
+        margin-top: 0.5rem;
+        min-width: 0;
+        max-width: 100%;
+        display: block;
+    }
+    .experience-card {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .experience-card, .institution-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .experience-logo, .institution-logo {
+        width: 80px;
+    }
+}
+
+/* Removed prefers-color-scheme media queries - using class-based dark theme instead */
+
+/* Footer lighten for light mode - even lighter shade */
+.site-footer {
+  background: #f7f8fa;
+}

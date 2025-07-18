@@ -2,7 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </div>
+
+    <div id="achievements">
+        <h2>Recent Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-title">Google Girl Hackathon 2025</div>
+                <div class="achievement-status">Semi-Finalist</div>
+                <div class="achievement-desc">Selected as a semi-finalist in Google's prestigious Girl Hackathon 2025, competing among thousands of participants globally.</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">💼</div>
+                <div class="achievement-title">JP Morgan Chase Code for Good 2025</div>
+                <div class="achievement-status">Semi-Finalist</div>
+                <div class="achievement-desc">Advanced to semi-finals in JP Morgan Chase's Code for Good hackathon, focusing on technology solutions for social impact.</div>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">⭐</div>
+                <div class="achievement-title">HackerRank 4-Star Rating</div>
+                <div class="achievement-status">SQL • Python • Java • C</div>
+                <div class="achievement-desc">Achieved 4-star proficiency rating across multiple programming languages and technologies on HackerRank platform.</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificates">`eta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soha Farhana's Portfolio - About</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="about.css">
@@ -48,7 +74,7 @@
                         </a>
                         <a href="https://www.hackerrank.com/profile/sohafarhana" target="_blank" class="profile-link hackerrank">
                             <img src="Photos/github-icon.png" alt="HackerRank" class="profile-icon">
-                            <span>HackerRank (4⭐ in Java, Python, C)</span>
+                            <span>HackerRank (4⭐ in SQL, Python, Java, C)</span>
                         </a>
                         <a href="https://www.geeksforgeeks.org/user/sohafarhana/" target="_blank" class="profile-link gfg">
                             <img src="Photos/gfg.png" alt="GFG" class="profile-icon">
@@ -56,30 +82,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="achievements">
-        <h2>Recent Achievements</h2>
-        <div class="achievements-grid">
-            <div class="achievement-card">
-                <div class="achievement-icon">🏆</div>
-                <div class="achievement-title">Google Girl Hackathon 2025</div>
-                <div class="achievement-status">Semi-Finalist</div>
-                <div class="achievement-desc">Selected as a semi-finalist in Google's prestigious Girl Hackathon 2025, competing among thousands of participants globally.</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">💼</div>
-                <div class="achievement-title">JP Morgan Chase Code for Good 2025</div>
-                <div class="achievement-status">Semi-Finalist</div>
-                <div class="achievement-desc">Advanced to semi-finals in JP Morgan Chase's Code for Good hackathon, focusing on technology solutions for social impact.</div>
-            </div>
-            <div class="achievement-card">
-                <div class="achievement-icon">⭐</div>
-                <div class="achievement-title">HackerRank 4-Star Rating</div>
-                <div class="achievement-status">Java • Python • C</div>
-                <div class="achievement-desc">Achieved 4-star proficiency rating across Java, Python, and C programming languages on HackerRank platform.</div>
             </div>
         </div>
     </div>
