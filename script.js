@@ -13,3 +13,17 @@ document.querySelector('.theme-switch input[type="checkbox"]').addEventListener(
         localStorage.setItem('theme', 'light');
     }
 });
+
+// Toggle expandable details sections
+function toggleDetails(id) {
+    const details = document.getElementById(id);
+    const button = details.previousElementSibling;
+    
+    if (details.classList.contains('show')) {
+        details.classList.remove('show');
+        button.textContent = 'View More Details ▼';
+    } else {
+        details.classList.add('show');
+        button.textContent = 'Show Less ▲';
+    }
+}

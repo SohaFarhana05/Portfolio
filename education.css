@@ -13,14 +13,14 @@
 }
 
 .institution-card {
-    background: #ffffff;
+    background: #d4ebf5;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid #9dcfe0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 3rem;
     padding: 2rem;
     position: relative;
@@ -34,14 +34,17 @@
 
 .institution-logo {
     width: 200px;
-    height: auto;
+    height: 200px;
+    min-width: 200px;
     object-fit: contain;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .institution-details {
     flex-grow: 1;
-    padding: 1rem;
+    padding: 0;
+    width: 100%;
 }
 
 .institution-details h2 {
@@ -151,12 +154,12 @@
 }
 
 .achievement-card {
-    background: #ffffff;
+    background: #d4ebf5;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid #9dcfe0;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
@@ -292,4 +295,120 @@
 
 .dark-theme .achievement-card p {
     color: #b0b0b0;
+}
+
+.dark-theme .experience-timeline {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Expandable Details Section */
+.details-toggle {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    color: #74b9ff;
+    border: 2px solid #74b9ff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(116, 185, 255, 0.15);
+}
+
+.details-toggle:hover {
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(116, 185, 255, 0.3);
+}
+
+.dark-theme .details-toggle {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    color: #90caf9;
+    border-color: #90caf9;
+}
+
+.dark-theme .details-toggle:hover {
+    background: linear-gradient(135deg, #90caf9, #a29bfe);
+    color: white;
+    border-color: transparent;
+}
+
+.expanded-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 0;
+}
+
+.expanded-details.show {
+    max-height: 2000px;
+    margin-top: 1.5rem;
+    transition: max-height 0.7s ease-in;
+}
+
+.detail-section {
+    background: rgba(33, 147, 176, 0.05);
+    border-left: 4px solid #2193b0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.dark-theme .detail-section {
+    background: rgba(116, 185, 255, 0.1);
+    border-left-color: #74b9ff;
+}
+
+.detail-section h3 {
+    color: #2193b0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.dark-theme .detail-section h3 {
+    color: #74b9ff;
+}
+
+.detail-section p {
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.dark-theme .detail-section p {
+    color: #e2e2e2;
+}
+
+.course-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-list li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(33, 147, 176, 0.1);
+    line-height: 1.8;
+}
+
+.dark-theme .course-list li {
+    border-bottom-color: rgba(116, 185, 255, 0.1);
+}
+
+.course-list li:last-child {
+    border-bottom: none;
+}
+
+.course-list strong {
+    color: #2193b0;
+    font-weight: 600;
+}
+
+.dark-theme .course-list strong {
+    color: #74b9ff;
 }

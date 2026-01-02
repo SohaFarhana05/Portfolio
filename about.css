@@ -103,6 +103,11 @@
     color: white;
 }
 
+.profile-link.codeforces {
+    background: linear-gradient(45deg, #1F8ACB, #4FA3D1);
+    color: white;
+}
+
 .profile-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -153,13 +158,13 @@ body.dark-theme #participations h2 {
 }
 
 .certificate-card {
-    background: linear-gradient(135deg, #e3eafc 80%, #f5faff 100%);
+    background: linear-gradient(135deg, #d4ebf5 80%, #e6f4fa 100%);
     border-radius: 18px;
     box-shadow: 0 6px 32px rgba(21,101,192,0.08), 0 1.5px 0 #fff;
     transition: transform 0.25s, box-shadow 0.25s;
     text-align: center;
     padding: 1.5rem 1.2rem 1.8rem 1.2rem;
-    border: 1.5px solid #e3eafc;
+    border: 1.5px solid #b8dde8;
     min-width: 280px;
     max-width: 370px;
     width: 100%;
@@ -495,6 +500,102 @@ body.dark-theme #participations h2 {
 
 .dark-theme .leadership-desc {
     color: #b0bec5;
+}
+
+/* Leadership Header with Logo */
+.leadership-header {
+    margin-bottom: 2rem;
+}
+
+.leadership-org-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    text-align: left;
+}
+
+.org-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.leadership-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+.dark-theme .leadership-meta {
+    color: #999;
+}
+
+/* Timeline Layout */
+.leadership-timeline {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.leadership-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #1565c0, #90caf9);
+}
+
+.dark-theme .leadership-timeline::before {
+    background: linear-gradient(180deg, #90caf9, #1565c0);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2rem;
+    width: 12px;
+    height: 12px;
+    background: #1565c0;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 4px rgba(21, 101, 192, 0.1);
+}
+
+.dark-theme .timeline-marker {
+    background: #90caf9;
+    border-color: #232946;
+    box-shadow: 0 0 0 4px rgba(144, 202, 249, 0.1);
+}
+
+.timeline-content {
+    flex: 1;
+    text-align: left;
+}
+
+.leadership-field {
+    font-size: 0.95em;
+    color: #1565c0;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.dark-theme .leadership-field {
+    color: #90caf9;
 }
 
 /* Achievements Section */
