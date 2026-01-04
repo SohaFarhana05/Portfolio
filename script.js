@@ -27,3 +27,55 @@ function toggleDetails(id) {
         button.textContent = 'Show Less ▲';
     }
 }
+
+// Typing effect for home page
+document.addEventListener('DOMContentLoaded', () => {
+    const h1Text = "Hi, I'm Soha Farhana";
+    const pText = "Data Science & Computer Science Student";
+    const h1Element = document.getElementById('typing-h1');
+    const pElement = document.getElementById('typing-p');
+
+    function typeWriter(element, text, speed, callback) {
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else if (callback) {
+                callback();
+            }
+        }
+        type();
+    }
+
+    if (h1Element && pElement) {
+        h1Element.innerHTML = ''; // Clear existing content
+        pElement.innerHTML = ''; // Clear existing content
+        typeWriter(h1Element, h1Text, 100, () => {
+            typeWriter(pElement, pText, 75);
+        });
+    }
+
+    // Typing effect for about page
+    const greetingText = "Hello World! I'm Soha Farhana 👋";
+    const taglineText = "Turning Data into Discoveries, Code into Innovation";
+    const greetingElement = document.getElementById('typing-greeting');
+    const taglineElement = document.getElementById('typing-tagline');
+
+    if (greetingElement && taglineElement) {
+        greetingElement.innerHTML = '';
+        taglineElement.innerHTML = '';
+        typeWriter(greetingElement, greetingText, 100, () => {
+            typeWriter(taglineElement, taglineText, 75);
+        });
+    }
+
+    // Reveal photo on home page
+    const profileImage = document.querySelector('.profile-image');
+    if (profileImage) {
+        setTimeout(() => {
+            profileImage.classList.add('reveal');
+        }, 500); // Delay before revealing the photo
+    }
+});

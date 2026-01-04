@@ -111,12 +111,13 @@
     width: 100%;
     height: auto;
     display: block;
-    filter: grayscale(100%) brightness(0.8);
-    transition: filter 0.5s ease;
+    border-radius: 20px;
+    filter: grayscale(100%);
+    transition: filter 1.5s ease-in-out;
 }
 
-.photo-frame:hover .profile-image {
-    filter: grayscale(0%) brightness(1);
+.profile-image.reveal {
+    filter: grayscale(0%);
 }
 
 /* Education Highlight Section */
