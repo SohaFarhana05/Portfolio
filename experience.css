@@ -17,7 +17,7 @@
     align-items: center;
     gap: 3rem;
     padding: 2rem;
-    background: #d4ebf5;
+    background: var(--card-bg);
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1.5px solid rgba(0, 0, 0, 0.15);
@@ -72,7 +72,7 @@
     font-size: 1.15rem;
     color: #2193b0;
     font-weight: 600;
-    background: #eaf6fa;
+    background: var(--card-bg);
     padding: 10px 28px;
     border-radius: 18px;
     box-shadow: 0 2px 8px rgba(33,147,176,0.07);
@@ -99,9 +99,9 @@
 
 /* Dark Theme Styles */
 .dark-theme .experience-card {
-    background: rgba(26, 26, 46, 0.8);
-    backdrop-filter: blur(10px);
-    border-color: rgba(116, 185, 255, 0.1);
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(6px);
+    border-color: rgba(116, 185, 255, 0.06);
 }
 
 .dark-theme .experience-title {
@@ -121,7 +121,12 @@
 }
 
 .dark-theme .site-footer {
-    background: rgba(30,32,50,0.12);
+    background: rgba(10, 25, 47, 0.8) !important;
+}
+
+/* Light mode footer override */
+body:not(.dark-theme) .site-footer {
+  background: #C5EEE9 !important;
 }
 
 @media (max-width: 900px) {
@@ -160,6 +165,6 @@
 /* Removed prefers-color-scheme media queries - using class-based dark theme instead */
 
 /* Footer lighten for light mode - even lighter shade */
-.site-footer {
-  background: #f7f8fa;
+body:not(.dark-theme) .site-footer {
+  background: #C5EEE9 !important;
 }

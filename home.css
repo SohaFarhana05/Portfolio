@@ -144,7 +144,7 @@
 }
 
 .degree-card {
-    background: #ffffff;
+    background: #E3F2FD;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -169,12 +169,12 @@
     color: #e2e2e2;
 }
 
-.degree-card p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 1rem;
+.degree-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
 }
-
 .dark-theme .degree-card p {
     color: #b0b0b0;
 }
@@ -203,7 +203,7 @@
 }
 
 .highlight-card {
-    background: #ffffff;
+    background: var(--card-bg);
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -302,15 +302,15 @@
 
 /* Dark theme for cards */
 .dark-theme .degree-card {
-    background: rgba(26, 26, 46, 0.8);
-    backdrop-filter: blur(10px);
-    border-color: rgba(116, 185, 255, 0.1);
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(6px);
+    border-color: rgba(116, 185, 255, 0.06);
 }
 
 .dark-theme .highlight-card {
-    background: rgba(26, 26, 46, 0.8);
-    backdrop-filter: blur(10px);
-    border-color: rgba(116, 185, 255, 0.1);
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(6px);
+    border-color: rgba(116, 185, 255, 0.06);
 }
 
 /* Mobile Styles - Text First, Photo Second */

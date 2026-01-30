@@ -13,7 +13,7 @@
 }
 
 .institution-card {
-    background: #d4ebf5;
+    background: var(--card-bg);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -71,7 +71,7 @@
     font-size: 1.15rem;
     color: #2193b0;
     font-weight: 600;
-    background: #eaf6fa;
+    background: var(--card-bg);
     padding: 10px 28px;
     border-radius: 18px;
     box-shadow: 0 2px 8px rgba(33,147,176,0.07);
@@ -154,7 +154,7 @@
 }
 
 .achievement-card {
-    background: #d4ebf5;
+    background: var(--card-bg);
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -262,9 +262,9 @@
 
 /* Dark Theme Styles */
 .dark-theme .institution-card {
-    background: rgba(26, 26, 46, 0.8);
-    backdrop-filter: blur(10px);
-    border-color: rgba(116, 185, 255, 0.1);
+    background: var(--card-bg-dark);
+    backdrop-filter: blur(6px);
+    border-color: rgba(116, 185, 255, 0.06);
 }
 
 .dark-theme .institution-details h2 {
@@ -285,8 +285,8 @@
 }
 
 .dark-theme .achievement-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: var(--card-bg-dark);
+    border-color: rgba(255, 255, 255, 0.04);
 }
 
 .dark-theme .achievement-card h3 {
@@ -298,7 +298,7 @@
 }
 
 .dark-theme .experience-timeline {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255,255,255,0.03);
     color: #ffffff;
     font-weight: 700;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -320,7 +320,7 @@
 }
 
 .details-toggle:hover {
-    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    background: linear-gradient(135deg, #74b9ff, #00b894);
     color: white;
     border-color: transparent;
     transform: translateY(-2px);
@@ -334,7 +334,7 @@
 }
 
 .dark-theme .details-toggle:hover {
-    background: linear-gradient(135deg, #90caf9, #a29bfe);
+    background: linear-gradient(135deg, #90caf9, #00b894);
     color: white;
     border-color: transparent;
 }

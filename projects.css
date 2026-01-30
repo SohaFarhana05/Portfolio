@@ -40,7 +40,7 @@
 }
 
 .project-item {
-    background: rgba(212, 235, 245, 0.85);
+    background: rgba(213, 244, 241, 0.85);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     overflow: hidden;
@@ -180,8 +180,8 @@
 
 /* Dark Theme Styles */
 .dark-theme .project-item {
-    background: rgba(26, 26, 46, 0.8);
-    border-color: rgba(116, 185, 255, 0.1);
+    background: var(--card-bg-dark);
+    border-color: rgba(116, 185, 255, 0.06);
 }
 
 .dark-theme .project-description {
