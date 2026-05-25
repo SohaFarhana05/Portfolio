@@ -65,9 +65,7 @@
 }
 
 .experience-timeline {
-    position: absolute;
-    right: 32px;
-    top: 32px;
+    position: relative;
     font-size: 1.15rem;
     color: #2193b0;
     font-weight: 600;
@@ -82,6 +80,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     z-index: 2;
+    align-self: flex-start;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .grade-range {

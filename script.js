@@ -31,7 +31,7 @@ function toggleDetails(id) {
 // Typing effect for home page
 document.addEventListener('DOMContentLoaded', () => {
     const h1Text = "Hi, I'm Soha Farhana";
-    const pText = "Data Science & Computer Science Student";
+    const pText = "Main quest: becoming the person younger me imagined.";
     const h1Element = document.getElementById('typing-h1');
     const pElement = document.getElementById('typing-p');
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing effect for about page
     const greetingText = "Hello World! I'm Soha Farhana 👋";
-    const taglineText = "Turning Data into Discoveries, Code into Innovation";
+    const taglineText = "Learning, building, failing, repeating.";
     const greetingElement = document.getElementById('typing-greeting');
     const taglineElement = document.getElementById('typing-tagline');
 
