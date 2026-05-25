@@ -1,8 +1,7 @@
 /* Projects Page Specific Styles */
-
 .projects-container {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
 }
 
@@ -12,61 +11,64 @@
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .section-title {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--text-primary);
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
 .section-divider {
-    width: 100px;
+    width: 60px;
     height: 4px;
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    background-color: var(--primary-color);
     margin: 0 auto;
     border-radius: 2px;
 }
 
 .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2.5rem; align-items: flex-start;
 }
 
 .project-item {
-    background: rgba(213, 244, 241, 0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #9dcfe0;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+} 
+
+body.dark-theme .project-item {
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-hover);
 }
 
 .project-header {
-    background: linear-gradient(135deg, #2193b0, #6dd5ed);
-    padding: 2rem;
+    background-color: var(--hover-bg);
+    padding: 2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    
 }
 
 .project-header h3 {
-    color: white;
-    font-size: 2rem;
+    color: var(--text-primary);
+    font-size: 1.6rem;
     margin: 0;
     font-weight: 600;
 }
@@ -74,37 +76,49 @@
 .project-status {
     padding: 0.5rem 1.2rem;
     border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: inline-block;
 }
 
+/* Updated Colors for statuses to match pastel look */
 .project-status.completed {
-    background: rgba(39, 174, 96, 0.2);
+    background-color: rgba(39, 174, 96, 0.1);
     color: #27ae60;
-    border: 2px solid rgba(39, 174, 96, 0.3);
 }
 
 .project-status.in-progress {
-    background: rgba(241, 196, 15, 0.2);
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #e67e22; /* softened orange/yellow */
+}
+
+body.dark-theme .project-status.completed {
+    color: #2ecc71;
+}
+
+body.dark-theme .project-status.in-progress {
     color: #f39c12;
-    border: 2px solid rgba(241, 196, 15, 0.3);
 }
 
 .project-body {
     padding: 2.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-description {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #444;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
 .project-features {
-    margin: 2rem 0;
+    margin: 1.5rem 0 2.5rem;
+    flex-grow: 1;
 }
 
 .feature-item {
@@ -112,14 +126,14 @@
     align-items: flex-start;
     gap: 0.8rem;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.5;
-    color: #555;
+    color: var(--text-secondary);
 }
 
 .feature-item::before {
     content: "✓";
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
+    background-color: var(--primary-color);
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -137,178 +151,67 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .tech-tag {
-    background: linear-gradient(45deg, #2193b0, #6dd5ed);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    font-size: 0.95rem;
+    background-color: var(--hover-bg);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
     font-weight: 500;
-    transition: transform 0.2s ease;
-}
-
-.tech-tag:hover {
-    transform: scale(1.05);
 }
 
 .project-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    margin-top: 1.5rem;
-    color: #2193b0;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    font-size: 1.05rem;
+    transition: all var(--transition-speed) ease;
     padding: 0.8rem 1.5rem;
-    border: 2px solid #2193b0;
+    border: 1px solid var(--primary-color);
     border-radius: 30px;
-    background: rgba(33, 147, 176, 0.05);
-    min-height: 44px;
+    min-height: 48px;
+    margin-top: auto;
 }
 
 .project-link:hover {
-    background: #2193b0;
-    color: white;
-    transform: translateX(5px);
+    background-color: var(--primary-color);
+    color: #fff;
     text-decoration: none;
 }
 
-/* Dark Theme Styles */
-.dark-theme .project-item {
-    background: var(--card-bg-dark);
-    border-color: rgba(116, 185, 255, 0.06);
-}
-
-.dark-theme .project-description {
-    color: #e2e2e2;
-}
-
-.dark-theme .feature-item {
-    color: #b0b0b0;
-}
-
-.dark-theme .project-link {
-    color: #74b9ff;
-    border-color: #74b9ff;
-    background: rgba(116, 185, 255, 0.05);
-}
-
-.dark-theme .project-link:hover {
-    background: #74b9ff;
-    color: #1a1a2e;
-}
-
 /* Mobile Responsive */
-@media (max-width: 1024px) {
-    .projects-container {
-        padding: 1.5rem;
-    }
-    
-    .project-header {
-        padding: 1.5rem;
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    
-    .project-header h3 {
-        font-size: 1.8rem;
-    }
-    
-    .project-body {
-        padding: 2rem;
-    }
-}
-
 @media (max-width: 768px) {
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+    
     .projects-container {
-        padding: 1rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .project-header h3 {
-        font-size: 1.6rem;
-    }
-    
-    .project-description {
-        font-size: 1.1rem;
-    }
-    
-    .feature-item {
-        font-size: 1rem;
-    }
-    
-    .tech-stack {
-        gap: 0.5rem;
-    }
-    
-    .tech-tag {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
-    }
-    
-    .project-body {
         padding: 1.5rem;
     }
     
-    .projects-list {
-        gap: 2rem;
-    }
-    
-    .project-item {
-        border-radius: 15px;
-    }
-    
-    .project-header {
-        padding: 1.2rem;
-    }
-    
-    .project-status {
-        padding: 0.4rem 1rem;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
     .section-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+    }
+    
+    .project-header, .project-body {
+        padding: 1.5rem;
     }
     
     .project-header h3 {
         font-size: 1.4rem;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
-    
-    .project-description {
-        font-size: 1rem;
-    }
-    
-    .feature-item {
-        font-size: 0.9rem;
-    }
-    
-    .tech-tag {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.8rem;
-    }
-    
-    .project-body {
-        padding: 1rem;
-    }
-    
+
     .project-header {
-        padding: 1rem;
-    }
-    
-    .project-status {
-        padding: 0.3rem 0.8rem;
-        font-size: 0.75rem;
+        justify-content: center;
     }
 }

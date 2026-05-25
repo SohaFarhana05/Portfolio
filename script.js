@@ -79,3 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500); // Delay before revealing the photo
     }
 });
+
+// Universal Staggered Animations for Elements
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all cards and interesting elements across the site
+    const animateElements = document.querySelectorAll(
+        '.project-item, .achievement-card, .contact-item, .certificate-card, .participation-card, .skills-highlight li, .timeline-item'
+    );
+    
+    // Add staggered delay to each
+    animateElements.forEach((el, index) => {
+        el.style.opacity = '0'; // Start invisible
+        // limit index to prevent massive delays on lists with lots of items like skills
+        const delay = Math.min(index * 0.1, 1.5); 
+        el.style.animation = `fadeInUp 0.6s ease-out forwards ${delay}s`;
+    });
+});
