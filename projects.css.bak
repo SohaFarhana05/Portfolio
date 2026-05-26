@@ -33,7 +33,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2.5rem;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .project-item {
@@ -71,9 +71,6 @@ body.dark-theme .project-item {
     font-size: 1.6rem;
     margin: 0;
     font-weight: 600;
-    min-height: 3.2rem; /* Ensure 2 lines of text height uniformly */
-    display: flex;
-    align-items: center;
 }
 
 .project-status {

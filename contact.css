@@ -131,15 +131,3 @@ body.dark-theme .contact-item:hover {
     color: var(--primary-color);
     background: rgba(255,255,255,0.03);
 }
-
-/* Animation keyframes */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}

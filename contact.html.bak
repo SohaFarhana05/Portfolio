@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soha Farhana's Portfolio - Contact</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Theme switch -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <main class="contact-container">
+        <h1 class="gradient-text">Reach Out to Me</h1>
+        
+        <div class="contact-grid">
+            <a href="mailto:sohafarhana@gmail.com" target="_blank" class="contact-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="contact-icon">
+                <p>sohafarhana@gmail.com</p>
+            </a>
+            
+            <a href="https://linkedin.com/in/sohafarhana" target="_blank" class="contact-item">
+                <img src="Photos/linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+                <p>LinkedIn</p>
+            </a>
+            
+            <a href="https://github.com/SohaFarhana05" target="_blank" class="contact-item">
+                <img src="Photos/github-icon.png" alt="GitHub" class="contact-icon">
+                <p>GitHub</p>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>

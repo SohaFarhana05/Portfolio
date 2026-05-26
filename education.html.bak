@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soha Farhana's Portfolio - Education</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="education.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="#contact-section">Contact</a>
+    </div>
+    <!-- Theme switch -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="education-container">
+        <h1 class="gradient-text">Education</h1>
+        <div class="education-cards">
+            <!-- Most recent first -->
+            <div class="institution-card">
+                <a href="https://www.iitm.ac.in" target="_blank" class="institution-link">
+                    <img src="Photos/IITM_LOGO.png" alt="IIT Madras Logo" class="institution-logo">
+                </a>
+                <div class="institution-details">
+                    <h2>Indian Institute of Technology, Madras</h2>
+                    <p>Bachelor of Science in Data Science</p>
+                    <p class="specialization">Specializing in Data Science</p>
+                    
+                    <button class="details-toggle" onclick="toggleDetails('iitm-details')">View More Details ▼</button>
+                    
+                    <div id="iitm-details" class="expanded-details">
+                        <div class="detail-section">
+                            <h3>🎓 Current Status</h3>
+                            <p>Currently pursuing both diplomas combined - Programming and Data Science. Finishing this semester!</p>
+                            <p><strong>Foundation CGPA:</strong> 9.0</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>📚 Courses Completed</h3>
+                            <ul class="course-list">
+                                <li><strong>Programming:</strong> Java, Python, Data Structures & Algorithms in Python</li>
+                                <li><strong>Machine Learning:</strong> ML Foundations (MLF), ML Practice (MLP), ML Techniques (MLT) - Yes, I've completed the entire ML track! 🎯</li>
+                                <li><strong>Data Science:</strong> Tools in Data Science (TDS) - The only hard but incredibly interesting course I encountered</li>
+                                <li><strong>Core Subjects:</strong> Mathematics, Statistics (lots of them!), Database Management Systems (DBMS), MAD1 (diploma)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>🏆 Academic Performance</h3>
+                            <p><strong>S Grade:</strong> Python Programming, English, Math 1, Stats 1</p>
+                            <p><strong>A Grade:</strong> Machine Learning Foundations, DBMS, Stats 2, Programming in Java, Programming Data Structures and Algorithms (PDSA)</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>🌟 Memorable Experience</h3>
+                            <p>Attended an IIT Madras event at IIIT Hyderabad - it was so much fun! Got to meet Prof. Bharathi Ma'am and connect with fellow learners.</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>💭 The Journey</h3>
+                            <p>Juggling between NIT Andhra and IIT Madras exams was hectic, but the journey has been incredibly fun and rewarding. Every challenge made me grow stronger! 🚀</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-timeline">2024–2028</div>
+            </div>
+
+            <div class="institution-card">
+                <a href="https://nitandhra.ac.in" target="_blank" class="institution-link">
+                    <img src="Photos/NIT_ANDHRA_LOGO.png" alt="NIT Andhra Pradesh Logo" class="institution-logo">
+                </a>
+                <div class="institution-details">
+                    <h2>National Institute of Technology, Andhra Pradesh</h2>
+                    <p>Bachelor of Technology in Computer Science</p>
+                    <p class="specialization">Specializing in Software Engineering</p>
+                    
+                    <button class="details-toggle" onclick="toggleDetails('nit-details')">View More Details ▼</button>
+                    
+                    <div id="nit-details" class="expanded-details">
+                        <div class="detail-section">
+                            <h3>📘 First Year - Semester 1 (Physics Cycle)</h3>
+                            <p><strong>SGPA:</strong> 8.51</p>
+                            <p>This was my first semester right after JEE, full of energy and excitement! Had Python programming and absolutely <em>loved</em> it. Got excellent grades in both lab and class. I enjoyed every moment and studied a lot because the motivation was still fresh from JEE preparation days. 🎯</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>🧪 First Year - Semester 2 (Chemistry Cycle)</h3>
+                            <p><strong>SGPA:</strong> 7.5 | <strong>CGPA:</strong> 8.00</p>
+                            <p>Honestly? I hated it. Literally hated all the subjects. So I didn't study anything - not even before exams. I regret that decision now. This semester was a big mess-up, and I literally lost focus. Lesson learned the hard way! 😅</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>💻 Second Year - Semester 3</h3>
+                            <p><strong>SGPA:</strong> 8.25</p>
+                            <p>Started coding in C as advised by our college. Getting back on track and rebuilding the momentum!</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>🚀 Second Year - Semester 4</h3>
+                            <p><strong>SGPA:</strong> 8.5</p>
+                            <p>This was amazing! I loved all the subjects here - learned SQL, Java, DBMS, and Theory of Computation. Was also doing Data Structures & Algorithms in Java. This semester reignited my passion for CS! ❤️</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>📚 Third Year - Semester 5</h3>
+                            <p>Tough semester with subjects like Compiler Design. Had electives in NLP and Machine Learning (can't even remember much from this phase honestly). Started studying extensively for IIT Madras ML courses and realized I needed to focus on one programming language. Since IIT Madras taught in Python and I was naturally drawn to Python, I decided to dive deep and restart from level 0. Best decision ever! 🐍</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>🎯 Third Year - Semester 6</h3>
+                            <p>Had a major project with a very hectic mentor. The experience was challenging with limited knowledge at the start, but it pushed me to grow.</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>🌟 Fourth Year - Semester 7</h3>
+                            <p>Focused heavily on Data Structures & Algorithms. Started helping juniors, making sure they don't make the same mistakes I did. Giving back to the community felt amazing! 💪</p>
+                        </div>
+                        
+                        <div class="detail-section">
+                            <h3>💡 Key Takeaways</h3>
+                            <p>My NIT journey taught me that it's okay to struggle, to hate some subjects, and to mess up. What matters is learning from mistakes and finding your true passion. From hating Chemistry cycle to loving SQL and Python, from low points to helping juniors - every semester shaped who I am today! 🚀</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-timeline">2022–2026</div>
+            </div>
+
+            <div class="institution-card">
+                <a href="https://www.narayanagroup.com" target="_blank" class="institution-link">
+                    <img src="Photos/narayana-logo.png" alt="Narayana Junior College Logo" class="institution-logo">
+                </a>
+                <div class="institution-details">
+                    <h2>Narayana Junior College</h2>
+                    <p>Intermediate Education (MPC)</p>
+                    <p class="specialization">Score: 98.6%</p>
+                </div>
+                <div class="experience-timeline">2020–2022</div>
+            </div>
+
+            <div class="institution-card">
+                <a href="#" class="institution-link">
+                    <img src="Photos/narayana-logo.png" alt="Narayana High School Logo" class="institution-logo">
+                </a>
+                <div class="institution-details">
+                    <h2>Narayana High School</h2>
+                    <p>10th Class (2017–2020)</p>
+                    <p class="specialization">CGPA: 10/10</p>
+                    <p>Anchored many events, served as School Head Girl, Deputy Head Girl in 9th standard, and was selected for the Epicenter Programme (top 30-40 students in the zone).</p>
+                    <p>Won several competitions including Spell Bee and Maths Olympiads, and reached Level 5 of the Narayana JEE program.</p>
+                </div>
+                <div class="experience-timeline">2018–2020</div>
+            </div>
+        </div>
+
+        <div class="achievements-section">
+            
+            </div>
+        </div>
+    </div>
+    
+    <section class="achievements-section" style="text-align: center;">
+        <h2 class="section-title">Certificates</h2>
+        <button class="cta-button" onclick="toggleDetails('certificates-details')">Expand to view more ▼</button>
+        
+        <div id="certificates-details" class="expanded-details">
+<div id="certificates" style="margin-top:2rem;">
+        
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <a href="Photos/FoundationCertificate.pdf">
+                    <img src="Photos/Foundation.png" alt="Foundation Certificate" class="certificate-img">
+                    <p>IIT Madras Foundation Certificate</p>
+                </a>
+                <p class="explanation">Awarded for successful completion of the foundational coursework at IIT Madras, building a strong base in core engineering concepts.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/Internship_Infosys.pdf">
+                    <img src="Photos/internship_infosys.png" alt="Infosys Internship Certificate" class="certificate-img">
+                    <p>Internship at Infosys</p>
+                </a>
+                <p class="explanation">Recognizes my AI internship at Infosys Springboard, where I worked on real-world AI projects and developed practical skills in artificial intelligence.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/ISRO.pdf">
+                    <img src="Photos/ISRO.png" alt="ISRO Certificate" class="certificate-img">
+                    <p>ISRO Training Program</p>
+                </a>
+                <p class="explanation">Certificate for participating in ISRO's training program, gaining exposure to space technology and satellite systems.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/sql_basic certificate.pdf">
+                    <img src="Photos/sql-basic.png" alt="SQL Basic Certificate" class="certificate-img">
+                    <p>SQL Basic Certificate</p>
+                </a>
+                <p class="explanation">Demonstrates my understanding of basic SQL concepts and database management skills.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/sql_intermediate certificate.pdf">
+                    <img src="Photos/sql-intermediate.png" alt="SQL Intermediate Certificate" class="certificate-img">
+                    <p>SQL Intermediate Certificate</p>
+                </a>
+                <p class="explanation">Shows my proficiency in intermediate SQL queries and database operations.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/Nestle.pdf">
+                    <img src="Photos/nestle.png" alt="Nestle Certificate" class="certificate-img">
+                    <p>Nestle's e-learning program</p>
+                </a>
+                <p class="explanation">Awarded for completing Nestle's e-learning modules, enhancing my knowledge in food technology and safety.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/adapt.pdf">
+                    <img src="Photos/adapt.png" alt="ADAPT Certificate" class="certificate-img">
+                    <p>ADAPT - Algorithms & Data Structures Certificate</p>
+                </a>
+                <p class="explanation">Recognizes my achievement in mastering algorithms and data structures through the ADAPT program.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/supervisedlearning.pdf">
+                    <img src="Photos/ml.png" alt="Supervised Learning Certificate" class="certificate-img">
+                    <p>Supervised Learning Certificate</p>
+                </a>
+                <p class="explanation">Certificate for completing coursework in supervised machine learning techniques and applications.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/IntrotoAI.pdf">
+                    <img src="Photos/IntrotoAI.png" alt="Introduction to AI Certificate" class="certificate-img">
+                    <p>Introduction to Artificial Intelligence</p>
+                </a>
+                <p class="explanation">Awarded for successfully finishing the Introduction to AI course, covering the basics of artificial intelligence.</p>
+            </div>
+            <div class="certificate-card">
+                <a href="Photos/User_ExperienceDesign.png">
+                    <img src="Photos/User_ExperienceDesign.png" alt="User Experience Design Certificate" class="certificate-img">
+                    <p>User Experience Design Certificate</p>
+                </a>
+                <p class="explanation">Demonstrates my understanding of user experience principles and design thinking.</p>
+            </div>
+
+        </div>
+    </div>
+
+    
+        </div>
+    </section>
+
+    <footer id="contact-section" class="site-footer">
+      <div class="footer-content">
+        <div class="footer-title">Contact Me</div>
+        <div class="footer-details">
+          <a href="mailto:sohafarhana@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="footer-icon"></a>
+          <a href="https://linkedin.com/in/sohafarhana" target="_blank"><img src="Photos/linkedin-icon.png" alt="LinkedIn" class="footer-icon"></a>
+          <a href="https://github.com/SohaFarhana05" target="_blank"><img src="Photos/github-icon.png" alt="GitHub" class="footer-icon"></a>
+          <a href="https://medium.com/@sohafarhana" target="_blank"><img src="Photos/medium-icon.png" alt="Medium" class="footer-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M13.82 12a6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.82 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z\'/></svg>'"></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

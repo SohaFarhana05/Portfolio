@@ -63,6 +63,17 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-primary);
@@ -97,7 +108,8 @@ a:hover {
 .gradient-text {
     font-size: 3.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end), var(--primary-color), var(--gradient-start));
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -105,6 +117,13 @@ a:hover {
     line-height: 1.2;
     text-align: center;
     letter-spacing: -0.03em;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Header Navigation */
@@ -134,6 +153,22 @@ a:hover {
     font-size: 0.9rem;
     position: relative;
     padding: 0.5rem 0;
+}
+
+#header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#header a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 #header a:hover {

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soha Farhana's Portfolio</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="header">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="#contact-section">Contact</a>
+    </div>
+
+    <!-- Theme switch -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <main class="home-container">
+        <section class="hero-section">
+            <div class="text-content">
+                <div class="creative-heading">
+                    <span class="greeting-text">Welcome! 👋</span>
+                    <h1 class="gradient-text" id="typing-h1"></h1>
+                    <p class="subtitle" id="typing-p"></p>
+                </div>
+                <div class="tagline">
+                    <p>AI Engineering Intern at PepsiCo | Love to code & create!</p>
+                </div>
+                <div class="quick-links">
+                    <a href="https://github.com/SohaFarhana05" target="_blank" class="social-link">
+                        <img src="Photos/github-icon.png" alt="GitHub" class="social-icon" loading="lazy">
+                    </a>
+                    <a href="https://leetcode.com/u/_Soha_Farhana/" target="_blank" class="social-link">
+                        <img src="Photos/leetcode-logo.png" alt="LeetCode" class="social-icon" loading="lazy">
+                    </a>
+                    <a href="https://codeforces.com/profile/Soha_Farhana" target="_blank" class="social-link">
+                        <img src="Photos/codeforces.png" alt="Codeforces" class="social-icon" loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com/messaging/compose/?to=SohaFarhana" target="_blank" class="social-link">
+                        <img src="Photos/linkedin-icon.png" alt="LinkedIn" class="social-icon" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-frame">
+                    <img src="Photos/soha.jpg" alt="Soha Farhana" class="profile-image" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="education-highlight">
+            <h2 class="section-title">Pursuing Dual Degrees</h2>
+            <div class="degree-cards">
+                <div class="degree-card">
+                    <h3>B.S. in Data Science</h3>
+                    <p>Indian Institute of Technology, Madras</p>
+                    <div class="degree-focus">Focus: Data Science & Machine Learning</div>
+                </div>
+                <div class="degree-card">
+                    <h3>B.Tech. in Computer Science</h3>
+                    <p>National Institute of Technology, Andhra Pradesh</p>
+                    <div class="degree-focus">Focus: Software Engineering</div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section class="highlights-section">
+            <h2 class="section-title">Quick Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <span class="highlight-number">10+</span>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">2</span>
+                    <p>Prestigious Institutes</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">6+</span>
+                    <p>Certifications</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">4+</span>
+                    <p>Hackathons</p>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="cta-section">
+            <p>Interested in my work?</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="cta-button">View Projects</a>
+                <a href="contact.html" class="cta-button secondary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact-section" class="site-footer">
+      <div class="footer-content">
+        <div class="footer-title">Contact Me</div>
+        <div class="footer-details">
+          <a href="mailto:sohafarhana@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="footer-icon"></a>
+          <a href="https://linkedin.com/in/sohafarhana" target="_blank"><img src="Photos/linkedin-icon.png" alt="LinkedIn" class="footer-icon"></a>
+          <a href="https://github.com/SohaFarhana05" target="_blank"><img src="Photos/github-icon.png" alt="GitHub" class="footer-icon"></a>
+          <a href="https://medium.com/@sohafarhana" target="_blank"><img src="Photos/medium-icon.png" alt="Medium" class="footer-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M13.82 12a6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.82 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z\'/></svg>'"></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

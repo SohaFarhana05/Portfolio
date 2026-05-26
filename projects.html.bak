@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soha Farhana's Portfolio - Projects</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="projects.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="header">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="#contact-section">Contact</a>
+    </div>
+    
+    <!-- Theme switch -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="projects-container">
+        <h1 class="gradient-text">My Projects</h1>
+        
+        <section class="projects-section">
+            
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-header" style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                        <h3>Resume-ATS-Score-Checker</h3>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-body" style="display: none;">
+                        <p class="project-description">
+                            An intelligent Resume Analyzer and Job Description matching system that helps candidates optimize their resumes for ATS (Applicant Tracking Systems). Upload a resume to get an ATS score, or upload both resume and JD to analyze skill matching percentage and get personalized improvement suggestions.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">• ATS score calculation for resume optimization</div>
+                            <div class="feature-item">• Resume and Job Description matching analysis</div>
+                            <div class="feature-item">• Percentage-based skills vs. requirements comparison</div>
+                            <div class="feature-item">• Personalized suggestions for resume improvement</div>
+                            <div class="feature-item">• Web-based interface with deployment on GitHub Pages</div>
+                            <div class="feature-item">• Collaborative project with multiple contributors</div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Natural Language Processing</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">GitHub Pages</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://linkedin-profile-analyzer-qvu0.onrender.com" target="_blank" class="project-link demo-link">
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="https://github.com/SohaFarhana05/Resume-ATS-Score-Checker" target="_blank" class="project-link github-link">
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header" style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                        <h3>Vehicle Parking Management System</h3>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-body" style="display: none;">
+                        <p class="project-description">
+                            A comprehensive full-stack parking management system with separate admin and user dashboards. Features real-time spot availability tracking, automated cost calculation based on parking duration, and complete reservation lifecycle management.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">• Dual role system (Admin & User) with secure authentication</div>
+                            <div class="feature-item">• Real-time parking spot status tracking (Available/Reserved/Occupied)</div>
+                            <div class="feature-item">• Automated cost calculation with per-minute billing</div>
+                            <div class="feature-item">• Admin dashboard with revenue analytics and lot management</div>
+                            <div class="feature-item">• User dashboard with parking history and cost summaries</div>
+                            <div class="feature-item">• Complete CRUD operations for parking lots and spots</div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">Bcrypt</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SohaFarhana05/Vehicle-Parking-App-MAD-I" target="_blank" class="project-link github-link">
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header" style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                        <h3>Keyboard Word Prediction</h3>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-body" style="display: none;">
+                        <p class="project-description">
+                            An intelligent keyboard word prediction system that uses machine learning algorithms to predict and suggest words as users type. Features real-time prediction, learning from user patterns, and adaptive suggestion algorithms.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">• Real-time word prediction and auto-completion</div>
+                            <div class="feature-item">• Machine learning-based suggestion engine</div>
+                            <div class="feature-item">• Adaptive learning from user typing patterns</div>
+                            <div class="feature-item">• Interactive web-based demo interface</div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Natural Language Processing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sohafarhana05.github.io/Keyboard-Word-Prediction/#demo" target="_blank" class="project-link demo-link">
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="https://github.com/SohaFarhana05/Keyboard-Word-Prediction" target="_blank" class="project-link github-link">
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header" style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                        <h3>YOLO-World</h3>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-body" style="display: none;">
+                        <p class="project-description">
+                            An advanced real-time object detection system using YOLO architecture. Implemented state-of-the-art computer vision techniques for accurate object detection and classification in various environments.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">• Multi-object detection with high accuracy</div>
+                            <div class="feature-item">• Real-time processing capabilities</div>
+                            <div class="feature-item">• Custom model training for specific use cases</div>
+                            <div class="feature-item">• Integration with video streams and image processing</div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header" style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                        <h3>Student Result Management System</h3>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-body" style="display: none;">
+                        <p class="project-description">
+                            A comprehensive web-based system for managing and analyzing student academic performance. The system provides an intuitive interface for students and administrators.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">• Secure authentication and role-based access</div>
+                            <div class="feature-item">• Automated result calculation and grade assignment</div>
+                            <div class="feature-item">• Performance analytics and visualization</div>
+                            <div class="feature-item">• Exportable reports and result cards</div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <a href="https://github.com/SohaFarhana05/Student-Result-Portal" class="project-link" target="_blank">View on GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header" style="cursor: pointer;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none';">
+                        <h3>Personal Portfolio Website</h3>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-body" style="display: none;">
+                        <p class="project-description">
+                            A modern, responsive portfolio website showcasing my projects, skills, and achievements. Built with a focus on user experience and modern design principles.
+                        </p>
+                        <div class="project-features">
+                            <div class="feature-item">• Responsive design that works seamlessly across all devices</div>
+                            <div class="feature-item">• Dark/Light theme toggle with persistent user preference</div>
+                            <div class="feature-item">• Interactive UI elements with smooth animations</div>
+                            <div class="feature-item">• Optimized images and performance</div>
+                            <div class="feature-item">• Accessible and SEO-friendly markup</div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="index.html" class="project-link demo-link">
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="https://github.com/SohaFarhana05/Portfolio" target="_blank" class="project-link github-link">
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer id="contact-section" class="site-footer">
+      <div class="footer-content">
+        <div class="footer-title">Contact Me</div>
+        <div class="footer-details">
+          <a href="mailto:sohafarhana@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email" class="footer-icon"></a>
+          <a href="https://linkedin.com/in/sohafarhana" target="_blank"><img src="Photos/linkedin-icon.png" alt="LinkedIn" class="footer-icon"></a>
+          <a href="https://github.com/SohaFarhana05" target="_blank"><img src="Photos/github-icon.png" alt="GitHub" class="footer-icon"></a>
+          <a href="https://medium.com/@sohafarhana" target="_blank"><img src="Photos/medium-icon.png" alt="Medium" class="footer-icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M13.82 12a6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.82 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z\'/></svg>'"></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

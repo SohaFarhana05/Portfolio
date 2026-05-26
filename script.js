@@ -30,6 +30,18 @@ function toggleDetails(id) {
 
 // Typing effect for home page
 document.addEventListener('DOMContentLoaded', () => {
+    // Add slide-in animation to body
+    document.body.style.animation = "fadeInPage 0.8s ease-out forwards";
+    
+    // Pulse animation for footer icons periodically
+    setInterval(() => {
+        const icons = document.querySelectorAll('.footer-icon');
+        icons.forEach(icon => {
+            icon.style.transform = 'scale(1.1)';
+            setTimeout(() => icon.style.transform = 'scale(1)', 200);
+        });
+    }, 5000);
+
     const h1Text = "Hi, I'm Soha Farhana";
     const pText = "Main quest: becoming the person younger me imagined.";
     const h1Element = document.getElementById('typing-h1');
